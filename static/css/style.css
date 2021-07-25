@@ -93,11 +93,58 @@ main {
   background-size: cover;
   background-color: var(--green-color);
   background-blend-mode: darken;
+  position: relative;
+}
+
+.main-aside {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 85px;
+  height: 100%;
+  /* background-color: rgba(0, 0, 0, 0.1); */
+  background-color: rgb(255, 255, 255, 1);
 }
 
 .main-product {
   width: 375px;
   padding-left: 22px;
+}
+
+#arrow {
+  position: absolute;
+  right: 25px;
+  bottom: 50px;
+  width: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#arrow > p,
+#arrow > p > .fa-chevron-down {
+  color: var(--green-color);
+}
+
+#arrow p:nth-child(1){
+  font-size: 13px;
+}
+
+.scroll-down{
+  animation-name: scrolling;
+  animation-iteration-count: infinite;
+  animation-duration: 1800ms;
+  opacity: 1;
+  animation-timing-function: ease-out;
+}
+
+@keyframes scrolling{
+  to{
+    transform: translateY(25px);
+    opacity: 0;
+
+  }
 }
 
 .main-product > h3 {
@@ -130,4 +177,3 @@ main {
 .btn:hover {
   background-color: var(--dark-green);
 }
-
