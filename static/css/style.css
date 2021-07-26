@@ -166,7 +166,7 @@ main {
   background-color: var(--green-color);
   display: inline-block;
   margin-top: 16px;
-  padding: 8px 24px;
+  padding: 14px 26px;
   cursor: pointer;
   border-radius: 3px;
   border: 1px solid white;
@@ -178,13 +178,15 @@ main {
 }
 
 .section-B {
-  background-color: white;
+  background-color: #fafafa;
   display: flex;
 }
 
 .middle-section {
   width: 70%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .items-container {
@@ -192,7 +194,6 @@ main {
   gap: 15px;
   margin: 5rem 0;
 }
-
 
 .item {
   position: relative;
@@ -206,13 +207,11 @@ main {
   cursor: pointer;
 }
 
-
 .item-image {
   width: 120px;
   z-index: 1;
   padding-bottom: 1em;
 }
-
 
 .item:hover .item-image {
   animation-name: spingy;
@@ -222,35 +221,33 @@ main {
 }
 
 @keyframes spingy {
-  from, to {
-    transform: scale(1,1);        
+  from,
+  to {
+    transform: scale(1, 1);
   }
   25% {
-    transform: scale(0.9,1.1);
+    transform: scale(0.9, 1.1);
   }
-  50%{
+  50% {
     transform: scale(1.1, 0.9);
   }
-  75%{
-    transform: scale(0.95,1.05);
+  75% {
+    transform: scale(0.95, 1.05);
   }
 }
 
-
-.z-index{
+.z-index {
   color: black;
   z-index: 1;
 }
 
-
-.item-link{
+.item-link {
   text-decoration: none;
   font-weight: 300;
   color: var(--green-color);
 }
 
-
-.item::after{
+.item::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -258,4 +255,184 @@ main {
   bottom: 0;
   left: 0;
   background-color: #ececec;
+}
+
+/* banner-1 section */
+.banner-1 {
+  width: 100%;
+  height: 445px;
+  margin-bottom: 5rem;
+  background-image: url("../images/banner-speaker.jpg");
+  background-size: cover;
+  background-color: var(--dark-green);
+  background-blend-mode: darken;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 7px;
+}
+
+.banner-1-content {
+  width: 375px;
+  display: flex;
+  flex-direction: column;
+  flex-direction: column;
+}
+
+.banner-1-content > h1 {
+  font-size: 48px;
+}
+
+.banner-1-content > p {
+  margin: 16px 0;
+  font-weight: 300;
+}
+
+.banner-1-content .banner-1-btn {
+  padding: 14px 26px;
+  border-radius: 3px;
+  border: 1px solid white;
+  background: var(--dark-green);
+  cursor: pointer;
+  transition: background-color 300ms;
+  position: relative;
+}
+
+.banner-1-btn::after {
+  content: "";
+  width: 0;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: var(--dark-green);
+  background-color: rgba(153, 153, 153, 0.233);
+  transition: width 300ms;
+}
+
+.banner-1-btn:hover::after {
+  width: 100%;
+}
+
+/* banner-2 section */
+
+.banner-2 {
+  width: 100%;
+  height: 345px;
+  background-image: url("../images/marc-speaker.jpg");
+  background-size: cover;
+  background-position: center;
+  background-color: #919191;
+  background-blend-mode: darken;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 7px;
+  margin-bottom: 5rem;
+  padding-left: 3rem;
+}
+
+.banner-2-content > h1 {
+  font-size: 35px;
+}
+
+.banner-2-content > p {
+  margin: 16px 0;
+  font-weight: 300;
+}
+
+.banner-2-content .banner-2-btn {
+  padding: 14px 26px;
+  border-radius: 3px;
+  border: none;
+  background: black;
+  cursor: pointer;
+  transition: background-color 300ms;
+  position: relative;
+}
+
+.banner-2-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: rgba(153, 153, 153, 0.233);
+  transition: all 300ms;
+}
+
+.banner-2-btn:hover::after {
+  width: 100%;
+}
+
+.banner-3-img {
+  flex: 1;
+  height: 465px;
+  background-image: url("../images/airpodss.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  border-radius: 7px;
+}
+
+.banner-3 {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 5rem;
+}
+
+.banner-3-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+  border: 1px solid var(--green-color);
+}
+
+.banner-3-content .align > h3,
+.banner-3-content .align > p {
+  margin: 15px 0;
+  width: 400px;
+  color: black;
+}
+
+.align {
+  width: 250px;
+}
+
+.banner-3-btn {
+  padding: 8px 16px;
+  background-color: black;
+  position: relative;
+}
+
+.banner-3-btn::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+.banner-3-btn {
+  cursor: pointer;
+  position: relative;
+}
+
+.banner-3-btn::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: rgba(153, 153, 153, 0.233);
+  transition: width 300ms;
+}
+
+.banner-3-btn:hover::after{
+  width: 100%;
 }
