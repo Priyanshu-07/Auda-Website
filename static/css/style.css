@@ -89,7 +89,7 @@ main {
   margin: 32px 0 0 0;
   width: 100%;
   height: 585px;
-  background-image: url("../images/bg3.jpg");
+  background-image: url("../images/main_bg.jpg");
   background-size: cover;
   background-color: var(--green-color);
   background-blend-mode: darken;
