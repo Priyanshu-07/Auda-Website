@@ -384,6 +384,7 @@ main {
 
 .banner-3-content {
   flex: 1;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -424,7 +425,7 @@ main {
   position: relative;
 }
 
-.banner-3-btn::after{
+.banner-3-btn::after {
   content: "";
   position: absolute;
   top: 0;
@@ -435,6 +436,127 @@ main {
   transition: width 300ms;
 }
 
-.banner-3-btn:hover::after{
+.banner-3-btn:hover::after {
   width: 100%;
+}
+
+/* Last Banner */
+
+.last-banner {
+  display: flex;
+  width: 100%;
+  height: 600px;
+  margin-bottom: 100px;
+}
+
+.last-banner-content {
+  border-radius: 3px;
+  flex: 1;
+}
+
+.text {
+  padding: 5px;
+  margin: 150px 10px;
+}
+.text > h2,
+.text > p {
+  color: black;
+  margin-bottom: 15px;
+}
+
+.text > p {
+  color: black;
+  margin-bottom: 15px;
+  font-weight: 300;
+  color: #919191;
+}
+
+.last-banner-image {
+  background-image: url("../images/p-img.jpg");
+  background-size: cover;
+  flex: 1;
+  background-position: top;
+  width: 100%;
+  height: 600px;
+  border-radius: 3px;
+}
+
+.footer {
+  width: 100%;
+  color: black;
+  padding-bottom: 1rem;
+}
+
+.footer-inside {
+  width: 70%;
+  margin: auto;
+  height: 250px;
+  display: flex;
+}
+
+.footer-card-1 {
+  margin-right: 50px;
+  flex: 1;
+}
+
+.footer-card-1 > h2 {
+  margin: 20px 0;
+}
+
+.footer-card-1 > p {
+  font-weight: 300;
+  color: #919191;
+}
+
+.footer-card-1 > h3 {
+  font-weight: 300;
+  margin: 40px 0;
+}
+
+.footer-card-2 {
+  flex: 1;
+  display: flex;
+  margin: 40px 20px;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.footer-card-2 > .footer-nav-links > p > a {
+  display: block;
+  transform: scale(0.9);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-card-2 > .footer-nav-links > p > a:hover {
+  transform: scale(1);
+  color: var(--green-color);
+}
+
+.footer-nav-links {
+  flex: 1;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.footer-social-nav {
+  flex: 1;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.fa-facebook,
+.fa-instagram,
+.fa-github {
+  font-size: 25px;
+  transition: color 300ms ease-in-out;
+}
+
+.fa-facebook:hover,
+.fa-instagram:hover,
+.fa-github:hover {
+  color: var(--green-color);
 }
