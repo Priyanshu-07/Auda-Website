@@ -625,12 +625,22 @@ main {
 @media (max-width: 480px) {
   .main-wrapper {
     width: 100%;
+    position: relative;
+    margin-top: 2rem;
+    overflow: hidden;
   }
 
   nav {
+    width: 100%;
     padding: 0 1rem;
     gap: 2rem;
     height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 99999999;
+    background-color: #000;
   }
 
   .logo {
